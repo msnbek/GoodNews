@@ -32,7 +32,30 @@ class NewsListTableViewController : UITableViewController {
             }
         }
     }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.articlesListVM.numberOfSections
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return self.articlesListVM == nil ? 0 : self.articlesListVM.numberOfSections
     }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.articlesListVM.numberOfRowsInSection(section)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ArticleTableViewCell else {
+            fatalError("CellNotFound")
+        }
+       let articleVM =  self.articlesListVM.articleAtIndex(indexPath.row)
+        cell.titleLabel.text = articleVM.title
+        cell.descriptionLabel.text = articleVM.description
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let articleVM =  self.articlesListVM.articleAtIndex(indexPath.row)
+        guard let url = URL(string: articleVM.url ) else { return }
+        UIApplication.shared.open(url)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
+    
 }

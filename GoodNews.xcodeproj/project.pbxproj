@@ -69,11 +69,7 @@
 				EDC5F69C299BC61F0044B67B /* Model */,
 				EDC5F699299BBAE70044B67B /* Services */,
 				EDC5F696299BAEDE0044B67B /* Controller */,
-				EDC5F682299BAE870044B67B /* AppDelegate.swift */,
-				EDC5F684299BAE870044B67B /* SceneDelegate.swift */,
-				EDC5F688299BAE870044B67B /* Main.storyboard */,
-				EDC5F68B299BAE880044B67B /* Assets.xcassets */,
-				EDC5F68D299BAE880044B67B /* LaunchScreen.storyboard */,
+				EDC5F6A7299BDFC00044B67B /* New Group */,
 				EDC5F690299BAE880044B67B /* Info.plist */,
 			);
 			path = GoodNews;
@@ -117,6 +113,18 @@
 				EDC5F6A5299BD1F80044B67B /* ArticleTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		EDC5F6A7299BDFC00044B67B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				EDC5F682299BAE870044B67B /* AppDelegate.swift */,
+				EDC5F684299BAE870044B67B /* SceneDelegate.swift */,
+				EDC5F68B299BAE880044B67B /* Assets.xcassets */,
+				EDC5F68D299BAE880044B67B /* LaunchScreen.storyboard */,
+				EDC5F688299BAE870044B67B /* Main.storyboard */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
