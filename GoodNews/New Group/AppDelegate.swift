@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationBar = UINavigationBar.appearance()
         navigationBar.standardAppearance = barAppearance
         navigationBar.scrollEdgeAppearance = barAppearance
-        
+        #imageLiteral(resourceName: "simulator_screenshot_321A9B12-DD1A-47F9-97CE-613951E5E42E.png")
         UINavigationBar.appearance().shadowImage = UIImage()
          return true
     }
