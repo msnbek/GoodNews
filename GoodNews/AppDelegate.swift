@@ -13,8 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+
+      //  UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 47/255, green: 54/255, blue: 64/255, alpha: 1.0)
+      //  UINavigationBar.appearance().backgroundColor =  UIColor(displayP3Red: 47/255, green: 54/255, blue: 64/255, alpha: 1.0)
+        let myColor = UIColor(displayP3Red: 80/255, green: 168/255, blue: 147/255, alpha: 1.0)
+        let barAppearance = UINavigationBarAppearance()
+        barAppearance.backgroundColor = myColor
+
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.standardAppearance = barAppearance
+        navigationBar.scrollEdgeAppearance = barAppearance
+        
+        UINavigationBar.appearance().shadowImage = UIImage()
+         return true
     }
 
     // MARK: UISceneSession Lifecycle
